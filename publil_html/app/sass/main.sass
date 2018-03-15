@@ -1,0 +1,490 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	//position: relative
+	line-height: 1.65
+	font-family: $default-font
+	direction: rtl
+	//overflow-x: hidden
+
+	img
+		max-width: 100%
+
+.wrapper
+	position: relative
+	width: 100%
+	overflow: hidden
+
+.visual-section
+	background-position: 50% 50%
+	background-size: cover
+	min-height: 740px
+	overflow: hidden
+	direction: rtl
+	text-align: center
+	padding: 70px 0 0
+	position: relative
+
+	.img-hold-right
+		position: absolute
+		top: 0
+		right: 0
+
+	.img-hold-left
+		top: 0
+		left: 0
+		position: absolute
+
+		.img-maska-header
+			position: absolute
+			left: -1px
+			top: 0
+
+	.logo
+		position: absolute
+		left: 40px
+		top: 30px
+
+	.visual-content
+		font-size: 53px
+		padding: 0 15px
+
+		h1
+			font-family: Heebo-Bold Helvetica
+			font-size: 80px
+			margin: 0
+			line-height: 1.2
+
+		p
+			//font-family: Heebo-Regular Helvetica
+			//text-align: center
+			margin-top: 0px
+			margin-bottom: 0px
+			line-height: 1.2
+			//display: inline-block
+			position: relative
+		//z-index: 27
+		.btn-visual
+			//direction: rtl
+			background-color: #e42a37
+			font-family: Heebo-Bold Helvetica
+			max-width: 535px
+			//height: 58px
+			padding: 10px
+			border: none
+			font-size: 35px
+			line-height: 1.2
+			color: #eeeeee
+			text-decoration: none
+			transition: all .5s ease
+			&:hover
+				transform: scale(.8)
+				background-color: #fe7b84
+				text-decoration: none
+				color: #111
+
+
+
+	.form-hold
+		bottom: 0
+		left: 0
+		width: 100%
+		//display: block
+		background: black
+		position: absolute
+		padding: 15px
+
+		h3
+			color: #fff
+			text-align: center
+			font-family: Heebo-Bold Helvetica
+			font-size: 25px
+			line-height: 1.1
+			margin: 0 0 12px
+
+		.form
+			max-width: 1140px
+			margin: 0 auto
+
+		.form-row-wrap
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -8px
+
+		.form-row
+			width: 25%
+			padding: 0 8px
+
+		.form-control
+			padding: 10px
+			direction: rtl
+			display: block
+			width: 100%
+			height: 60px
+			color: #b5b5b5
+			border: none
+			font-size: 20px
+			font-family: "SimplerPro_V3"
+			line-height: 1.2
+
+		.btn
+			background: #e42a37
+			color: white
+			text-align: center
+			height: 60px
+			border: none
+			outline: none
+			display: block
+			width: 100%
+
+.main-wrap
+	text-align: center
+	background-image:  url(../img/6.png), url(../img/Rectangle-5.png)
+	background-position: left bottom
+	background-repeat: no-repeat
+	padding: 65px 0 0
+
+	p
+		margin: 0 0 20px
+
+	.intro-section
+		padding: 0 25px
+		font-size: 25px
+		color: #636363
+		line-height: 1.1
+		margin-bottom: 50px
+
+.boxes-section
+	font-size: 20px
+	font-weight: bold
+	line-height: 1.1
+	padding: 0 15px
+	margin: 0 auto 50px
+	max-width: 1310px
+
+
+	ul
+		padding: 0
+		list-style: none
+		display: flex
+		margin: 0 -25px
+
+	li
+		width: 20%
+		padding: 0 25px
+
+	img
+		margin: 0 0 10px
+
+	span
+		display: block
+
+.footer-holder
+	text-align: center
+	padding: 10px 15px
+	background: #da1d24
+	font-size: 20px
+	color: #fff
+
+	p
+		margin: 0
+	
+
+.slick-slider
+	direction: ltr
+	position: relative
+	display: block
+	box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+
+.slick-list
+	position: relative
+	overflow: hidden
+	display: block
+	margin: 0
+	padding: 0
+	transform: translate3d(0, 0, 0)
+	&:focus
+		outline: none
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-track
+	position: relative
+	left: 0
+	top: 0
+	display: block
+	transform: translate3d(0, 0, 0)
+
+	&:before,
+	&:after
+		content: ""
+		display: table
+
+	&:after
+		clear: both
+
+.slick-slide
+	float: left
+	height: 100%
+
+.slick-arrow
+	position: absolute
+	border: none
+	outline: none
+	top: 50%
+	width: 25px
+	height: 25px
+	border-left: 8px solid #e42a37
+	border-top: 8px solid #e42a37
+	z-index: 99999
+
+.slick-next
+	right: 0
+	transform: translateY(-50%) rotate(135deg)
+.slick-prev
+	left: 0
+	transform: translateY(-50%) rotate(-45deg)
+
+.slick-arrow.slick-hidden
+		display: none
+
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+//start code header
+.container-fluid
+	padding-left: 0
+	padding-right: 0
+	padding-top: 0
+
+
+.wrap-header
+	.header-wrap
+		text-align: center
+		margin-top: 70px
+
+	.header-center-block
+		text-align: center
+		position: relative
+		//border: 2px solid red
+		width: 100%
+		height: 610px
+		h1
+			font-family: Heebo-Bold Helvetica
+			font-size: 71px
+			//direction: rtl
+			//display: inline-block
+			margin: 0
+			line-height: 1.2
+			//text-align: center
+			position: relative
+			//left: 798.58px
+			//top: 71.95px
+			//z-index: 29
+
+		p
+			font-size: 60px
+			font-family: Heebo-Regular Helvetica
+			//text-align: center
+			margin-top: 0px
+			margin-bottom: 0px
+			line-height: 1.2
+			text-align: center
+			direction: rtl
+			//display: inline-block
+			position: relative
+			//z-index: 27
+		button
+			//direction: rtl
+			background-color: #e42a37
+			font-family: Heebo-Bold Helvetica
+			max-width: 535px
+			height: 58px
+			border: none
+			font-size: 35px
+			line-height: 1.2
+			color: #eeeeee
+
+
+
+.form-section
+	position: relative
+	//display: block
+	width: 100%
+	height: 155px
+	background: black
+	margin-top: -80px
+	display: flex
+	justify-content: center
+	h3
+		color: #fff
+		text-align: center
+		font-family: Heebo-Bold Helvetica
+		direction: rtl
+		font-size: 25px
+		margin-bottom: 12px
+		margin-top: 13px
+	form
+		input
+			text-indent: 10px
+			direction: rtl
+			display: inline-block
+			height: 60px
+			border: none
+			font-size: 30px
+			font-family: "SimplerPro_V3"
+			line-height: 1.2
+			margin: 0 7.5px
+			//text-align: center
+		input[type=submit]
+			background: #e42a37
+			color: white
+			text-align: center
+			width: 250px
+		input[type=text], input[type=email]
+			color: #b5b5b5
+			width: 280px
+
+//Finish form section
+
+//Start footer section
+.footer-section
+	display: flex
+	justify-content: center
+	text-align: center
+	position: relative
+	display: block
+	background-image: url(../img/reliable-developer.png), url(../img/6.png), url(../img/Rectangle-5.png)
+	background-position: left bottom
+	background-repeat: no-repeat
+	width: 100%
+	height: 940px
+	.wrap-futer
+		display: inline-block
+		margin-top: 75px
+		line-height: 1.2
+		font-size: 25px
+		width: 1088px
+		height: 169px
+		//text-align: center
+		p
+			direction: rtl
+		.regular-font
+			font-family: Heebo-Regular
+			color: #636363
+		.medium-font
+			font-family: Heebo-Medium
+			color: #636363
+	ul
+		margin-top: 60px
+		font-family: Heebo-Bold
+		//border: 1px solid black
+		//display: flex
+		//justify-content: center
+		li
+			position: relative
+			//border: 1px solid black
+			//padding: 0 10px
+			margin: 0 50px
+			width: 160px
+			height: 260px
+			display: inline-block
+			vertical-align: top
+			span
+				padding-top: 10px
+				//position: absolute
+				//top: 0
+				//background: red
+				//margin-top: 100px
+				display: inline-block
+				direction: rtl
+				//width: 100px
+				font-family: Heebo-Bold
+				font-size: 21px
+				line-height: 1.2
+				height: 100px
+				color: #2d2d2d
+	.wrap-footer-section
+		display: flex
+		justify-content: center
+		position: relative
+		height: 100%
+		//border: 2px solid red
+		.bold-font
+			position: absolute
+			bottom: 0
+			display: inline-block
+			font-family: Heebo-Bold
+			font-size: 21px
+			line-height: 1.2
+			color: #eeeeee
+
+
+
+
+
+
+
+//Finish footer section
+
+@import "media" // Всегда в конце
