@@ -5,6 +5,14 @@
 
 /*==========  Desktop First  ==========*/
 
+@media screen and (max-height: 768px)
+  .visual-section
+    min-height: 100vh
+
+@media screen and (max-height: 500px)
+  .visual-section
+    min-height: 500px
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
   .visual-section
@@ -22,11 +30,11 @@
     .visual-content
       font-size: 47px
 
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   .visual-section
     padding-top: 90px
+    min-height: 660px
 
     .img-hold-right
       display: none
@@ -70,6 +78,7 @@
 @media only screen and (max-width : 768px)
   .visual-section
     background-image: url("../img/Layer-1.png") !important
+    min-height: 680px
 
     .visual-content
       font-size: 28px
@@ -83,7 +92,7 @@
 
 
     .form-hold
-      padding-top: 240px
+      padding-top: 177px
       position: static
       background: linear-gradient(to bottom,  rgba(0,0,0,0)  0%, rgba(0,0,0,1)  100%)
 
@@ -110,6 +119,9 @@
     li
       padding: 0 40px
 
+    span
+      max-width: 180px
+      margin: 0 auto
   .bottom-img
     margin: 0 -130px
 
@@ -133,7 +145,7 @@
 
 
     .form-hold
-      padding-top: 240px
+      padding-top: 177px
       position: static
       background: linear-gradient(to bottom,  rgba(0,0,0,0)  0%, rgba(0,0,0,1)  100%)
       h3
@@ -169,7 +181,7 @@
     margin: 0 -130px
 
   .footer-holder
-    font-size: 12px
+    font-size: 10px
 
 
 /* Custom, iPhone Retina */
