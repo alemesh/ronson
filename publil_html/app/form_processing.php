@@ -4,8 +4,8 @@
 $senderName = 'Ronson';
 $senderEmail = $_SERVER['SERVER_NAME'];
 $targetEmail = [];
-$targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il'];
-//$targetEmail = ['alemesh@acceptic.com'];
+//$targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il'];
+$targetEmail = ['alemesh@acceptic.com'];
 $messageSubject = 'Message from web-site - '. $_SERVER['SERVER_NAME'];
 $redirectToReferer = true;
 $redirectURL = $_SERVER['SERVER_NAME'];
@@ -15,6 +15,8 @@ $redirectURL = $_SERVER['SERVER_NAME'];
 $ufname = $_POST['name'];
 $uphone = $_POST['tel'];
 $umail = $_POST['email'];
+$ProjectID = $_POST['ProjectID'];
+$Password = $_POST['Password'];
 
 // prepare message text
 $messageText =	'First Name: '.$ufname."\n".
@@ -33,12 +35,68 @@ foreach ($targetEmail as $val){
     mail($val, $messageSubject, $messageText, $messageHeaders);
 }
 
-$urlredirect = 'http://www.ronson.co.il/thanks-page.html?Lead=true';
-//$urlredirect = 'http://192.168.89.147/thanks-page.html?Lead=true';
-// redirect
-if($redirectToReferer) {
-    header("Location: ".$urlredirect);
-} else {
-    header("Location: ".$redirectURL);
-}
+
+// BmbYY sistem ======
+
+//$url = 'http://www.bmby.com/shared/AddClient/index.php';
+//$url = 'http://192.168.89.147/test.php';
+$url = 'http://testbmby/test.php';
+$params = array(
+    'Fname' => $ufname, // в http://localhost/post.php это будет $_POST['param1'] == '123'
+    'Phone' => $uphone, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+    'Email' => $umail, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+    'ProjectID' => $ProjectID, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+    'Password' => $Password // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+);
+$result = file_get_contents($url, false, stream_context_create(array(
+    'http' => array(
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => http_build_query($params)
+    )
+)));
+
+echo $result;
+
+
+
+
+
+
+
+//$myCurl = curl_init();
+//curl_setopt_array($myCurl, array(
+//    CURLOPT_URL => 'http://192.168.89.147/test.php',
+//    CURLOPT_RETURNTRANSFER => true,
+//    CURLOPT_POST => true,
+//    CURLOPT_POSTFIELDS => http_build_query(array(
+//        'Fname' => $ufname, // в http://localhost/post.php это будет $_POST['param1'] == '123'
+//        'Phone' => $uphone, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+//        'Email' => $umail, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+//        'ProjectID' => $ProjectID, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+//        'Password' => $Password // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+//    ))
+//));
+//$response = curl_exec($myCurl);
+//curl_close($myCurl);
+//
+//echo "Ответ на Ваш запрос: ".$response;
+
+
+// BmbYY sistem ======
+
+
+
+
+
+
+
+//$urlredirect = 'http://www.ronson.co.il/thanks-page.html?Lead=true';
+//$urlredirect = 'http://192.168.89.147/test.php';
+//// redirect
+//if($redirectToReferer) {
+//    header("Location: ".$urlredirect);
+//} else {
+//    header("Location: ".$redirectURL);
+//}
 ?>
