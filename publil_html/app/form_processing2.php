@@ -4,8 +4,8 @@
 $senderName = 'Ronson';
 $senderEmail = $_SERVER['SERVER_NAME'];
 $targetEmail = [];
-$targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il', 'alemesh@acceptic.com'];
-//$targetEmail = ['alemesh@acceptic.com'];
+//$targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il'];
+$targetEmail = ['alemesh@acceptic.com'];
 $messageSubject = 'Message from web-site - '. $_SERVER['SERVER_NAME'];
 $redirectToReferer = true;
 $redirectURL = $_SERVER['SERVER_NAME'];
@@ -38,9 +38,9 @@ foreach ($targetEmail as $val){
 
 // BmbYY sistem ======
 
-$url = 'http://www.bmby.com/shared/AddClient/index.php';
+//$url = 'http://www.bmby.com/shared/AddClient/index.php';
 //$url = 'http://192.168.89.147/test.php';
-//$url = 'http://testbmby/test.php';
+$url = 'http://testbmby/test.php';
 $params = array(
     'Fname' => $ufname, // в http://localhost/post.php это будет $_POST['param1'] == '123'
     'Phone' => $uphone, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
@@ -56,7 +56,7 @@ $result = file_get_contents($url, false, stream_context_create(array(
     )
 )));
 
-//echo $result;
+echo $result;
 
 
 
@@ -91,12 +91,12 @@ $result = file_get_contents($url, false, stream_context_create(array(
 
 
 
-$urlredirect = 'http://www.ronson.co.il/thanks-page.html?Lead=true';
-//$urlredirect = 'http://192.168.89.147/';
+//$urlredirect = 'http://www.ronson.co.il/thanks-page.html?Lead=true';
+//$urlredirect = 'http://192.168.89.147/test.php';
 //// redirect
-if($redirectToReferer) {
-    header("Location: ".$urlredirect);
-} else {
-    header("Location: ".$redirectURL);
-}
+//if($redirectToReferer) {
+//    header("Location: ".$urlredirect);
+//} else {
+//    header("Location: ".$redirectURL);
+//}
 ?>
