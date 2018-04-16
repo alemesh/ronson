@@ -70,6 +70,12 @@
         img
           max-width: 100%
 
+    .form-hold
+      .wrap-btn
+        position: relative
+        &:after
+          left: 33%
+
   .boxes-section
     font-size: 16px
 
@@ -105,7 +111,47 @@
         font-size: 18px
 
       .btn
-        height: 42px
+        height: 55px
+
+      .mobile-phone-button
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: "Heebo-Regular"
+        font-size: 23px
+        a
+          display: flex
+          justify-content: center
+          align-items: center
+          background: #579e30
+          width: 100%
+          height: 55px
+          text-decoration: none
+          color: white
+          &:hover
+            transition: all 0.2s ease
+            background: #417629
+          span
+            position: relative
+            margin-left: 15px
+            &:after
+              content: ''
+              position: absolute
+              border: none
+              outline: 0
+              top: 50%
+              left: -15px
+              width: 11px
+              height: 11px
+              border-left: 2px solid white
+              border-top: 2px solid white
+              //z-index: 99999
+              transform: translateY(-50%) rotate(-45deg)
+      .wrap-btn
+        position: relative
+        &:after
+          left: 44%
+
 
   .main-wrap
 
@@ -128,6 +174,14 @@
   .footer-holder
     font-size: 12px
 
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px)
+  .visual-section
+    .form-hold
+      .wrap-btn
+        position: relative
+        &:after
+          left: 42%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -160,7 +214,11 @@
         font-size: 18px
 
       .btn
-        height: 42px
+        height: 55px
+      .wrap-btn
+        position: relative
+        &:after
+          left: 40%
 
   .main-wrap
 
