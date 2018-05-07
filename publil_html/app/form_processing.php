@@ -4,7 +4,7 @@
 $senderName = 'Ronson';
 $senderEmail = $_SERVER['SERVER_NAME'];
 $targetEmail = [];
-$targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il', 'alemesh@acceptic.com', 'sales1@ronson.co.il', 'eli@gofmans.co.il'];
+$targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il', 'alemesh@acceptic.com', 'israel@gofmans.co.il', 'sales1@ronson.co.il', 'eli@gofmans.co.il'];
 //$targetEmail = ['alemesh@acceptic.com'];
 $messageSubject = 'Message from web-site - '. $_SERVER['SERVER_NAME'];
 $redirectToReferer = true;
@@ -125,9 +125,9 @@ $bom = "\xEF\xBB\xBF";
 $urlredirect = 'http://www.ronson.co.il/thanks-page.html?Lead=true';
 //$urlredirect = 'http://192.168.89.147/thanks-page.html?Lead=true';
 //// redirect
-if($redirectToReferer) {
-    header("Location: ".$urlredirect);
-} else {
-    header("Location: ".$redirectURL);
-}
+//if($redirectToReferer) {
+//    header("Location: ".$urlredirect);
+//} else {
+//    header("Location: ".$redirectURL);
+//}
 ?>
