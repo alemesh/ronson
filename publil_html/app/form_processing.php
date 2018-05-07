@@ -108,6 +108,18 @@ $result = file_get_contents($url, false, stream_context_create(array(
 
 
 
+//========== xml backups lids ================
+
+$today = date("F j, Y, g:i a");
+
+$file = 'sample.csv';
+$tofile = "$ufname;$uphone;$umail;$today\n";
+$bom = "\xEF\xBB\xBF";
+@file_put_contents($file, $bom . $tofile . file_get_contents($file));
+
+
+
+
 
 
 $urlredirect = 'http://www.ronson.co.il/thanks-page.html?Lead=true';
